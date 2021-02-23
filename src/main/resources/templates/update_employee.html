@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org">
+<head>
+
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<title>Employee Management System</title>
+</head> 
+<body>
+<div class="container">
+<h1><b>Employee Management System</b></h1>
+<hr>
+<h3>Update Employee</h3>
+<form action="#"  th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
+<input type="hidden" th:field=*{id}>
+<input type="text" th:field="*{firstName}" placeholder="Employee First Name" class="form-control mb-10 col-3" th:text><br>
+<input type="text" th:field="*{lastName}" placeholder="Employee Lirst Name" class="form-control mb-4 col-4"><br>
+<input type="text" th:field="*{email}" placeholder="Employee Email" class="form-control mb-4 col-4"><br>
+<button type="submit" class="btn btn-info col-2">Update Employee</button>
+</form>
+</div>
+
+</body>
+</html>
